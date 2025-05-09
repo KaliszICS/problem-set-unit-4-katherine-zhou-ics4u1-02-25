@@ -1,7 +1,20 @@
 import java.util.Random;
 
+/**
+ * This class is a standard deck of card exculding the joker.
+ * It checks the size of the deck, chacks the top card, and shuffles the deck.
+ * @author Katherine Zhou
+ * @version 17.0.1
+ * 
+ */
+
+//instance variable
 public class Deck{
     private Card[] deck;
+	/**
+	 * Array of cards that are set as the deck
+	 * @param deck is an array of cards that are set as the deck
+	 */
 
 	public Deck(Card[] deck) {
 		if (deck != null) {
@@ -14,6 +27,10 @@ public class Deck{
 			this.deck = new Card[0];
 		}
 	}
+	/**
+	 * Makes a deck of unshuffled cards in this order:
+	 * hearts, clubs, diamonds, spades, Ace to King
+	 */
 	public Deck() {
 		String[] suits = {"hearts", "clubs", "diamonds", "spades"};
 		String[] name = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King"};
@@ -28,9 +45,17 @@ public class Deck{
 			}
 		}
 	}
+	/**
+	 * returns the number of cards that are in the deck
+	 * @return the number of cards in the deck
+	 */
 	public int size() {
 		return this.deck.length;
 	}
+/**
+ * Draws the card at the top of the deck
+ * @return the top card, returns null if the deck is empty
+ */
 
 	public Card draw() {
 		if (this.deck.length == 0) {
@@ -45,6 +70,10 @@ public class Deck{
 		this.deck = newCard;
 		return top;
 	}
+/**
+ * Shuffles the deck of cards
+ * Order of cards is randomized
+ */
 
 	public void shuffle() {
 		Random random = new Random();
