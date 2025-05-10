@@ -7,6 +7,8 @@
  */
 
 public class DiscardPile{
+
+    //instance variables
     private Card[] pile;
 /**
  * This constructor takes in an array of cards and sets it as the discard pile
@@ -26,14 +28,12 @@ public class DiscardPile{
             this.pile = new Card[0];
         }
     }
-
     /**
      * Generates empty card pile with no paramaters
      */
     public DiscardPile(){
         this.pile = new Card[0];
     }
-
     /**
      * returns the discard pile as an array of cards
      * @return returns the discard pile
@@ -41,7 +41,6 @@ public class DiscardPile{
     public Card[] getpile(){
         return this.pile;
     }
-
     /**
      * returns the amount of cards in the discard pile
      * @return reutrns amount of cards in discard pile
@@ -50,7 +49,6 @@ public class DiscardPile{
     public int size(){
         return this.pile.length;
     }
-
     /**
      * Adds the provided card into the discard pile
      * if there is no card, it doesn't do anything
@@ -68,7 +66,6 @@ public class DiscardPile{
         newPile[this.pile.length] = card;
         this.pile = newPile;
     }
-
     /**
      * Removes the specified card from the discard pile and returns it
      * If the card doesn't exist, it returns null
@@ -112,7 +109,6 @@ public class DiscardPile{
         this.pile = new Card[0];
         return removedCards;
     }
-
     /**
      * returns all the cards in the order they were added into the discard pile
      * @return returns a list of the cards in the discard pile (eg. "Ace of hearts, King of Hearts, Queen of Hearts, Jack of Hearts, 9 of Spades")

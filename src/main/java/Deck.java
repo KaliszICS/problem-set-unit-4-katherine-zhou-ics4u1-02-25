@@ -53,10 +53,10 @@ public class Deck{
 	public int size(){
 		return this.deck.length;
 	}
-/**
- * Draws the card at the top of the deck
- * @return the top card, returns null if the deck is empty
- */
+	/**
+ 	* Draws the card at the top of the deck
+ 	* @return the top card, returns null if the deck is empty
+ 	*/
 
 	public Card draw(){
 		if (this.deck.length == 0){
@@ -71,10 +71,10 @@ public class Deck{
 		this.deck = newCard;
 		return top;
 	}
-/**
- * Shuffles the deck of cards
- * Order of cards is randomized
- */
+	/**
+ 	* Shuffles the deck of cards
+ 	* Order of cards is randomized
+ 	*/
 
 	public void shuffle(){
 		Random random = new Random();
@@ -86,8 +86,6 @@ public class Deck{
 			this.deck[next] = hold;
 		}
 	}
-
-
 	/**
 	 * Adds the provided card back into the deck
 	 * @param card is the provided card thats to be added back into the deck
@@ -96,7 +94,6 @@ public class Deck{
         if (card == null){
             return;
         }
-
         Card[] newDeck = new Card[this.deck.length + 1];
         for (int i = 0; i < this.deck.length; i++){
             newDeck[i] = this.deck[i];
@@ -104,7 +101,6 @@ public class Deck{
         newDeck[this.deck.length] = card;
         this.deck = newDeck;
     }
-
 	/**
 	 * Adds all the cards in the card array back into the deck and shuffles after adding them
 	 * Exits if there are no cards to add or if its null
@@ -113,39 +109,36 @@ public class Deck{
         if (cards == null || cards.length == 0){
             return;
         }
-		/**
-		 * The size of the deck will increase if there are cards to be added
-		 */
+	/**
+	* The size of the deck will increase if there are cards to be added
+	*/
         int Size = this.deck.length;
  		 for (int i = 0; i < cards.length; i++){
             if (cards[i] != null) {
                 Size++;
             }
         }
-		/**
-		 * The new deck is stored in a new array
-		 */
-
+	/**
+	* The new deck is stored in a new array
+	*/
         Card[] newDeck = new Card[Size];
         int amount = 0;
 
     	for (int i = 0; i < this.deck.length; i++){
        		newDeck[amount] = this.deck[i];
         	amount++;
-    }
+    	}
     	for (int i = 0; i < cards.length; i++){
         	if (cards[i] != null) {
             	newDeck[amount] = cards[i];
             	amount++;
-		/**
-		 * deck now includes all added cards
-		 * deck is shuffled
-		 */
+	/**
+	* deck now includes all added cards
+	* deck is shuffled
+	*/
 			}
 		}
         this.deck = newDeck;
         this.shuffle();
-
-
 }
 }

@@ -32,7 +32,7 @@ public class Card{
     public String getName(){
         return this.name;
     }
-        /**
+    /**
      * returns the suit of the card
      * @return returns the suit of the card (eg. "club")
      */
@@ -41,7 +41,7 @@ public class Card{
     public String getSuit(){
         return this.suit;
     }
-        /**
+    /**
      * returns the value of the card
      * @return returns the value of the card (eg. 1 for ace)
      */
@@ -50,7 +50,6 @@ public class Card{
     public int getValue(){
         return this.value;
     }
-
     /**
      * returns the full name of the card
      * @return returns the full name of the card(eg. "Queen of Hearts" if the name is Queen and the suit is hearts)

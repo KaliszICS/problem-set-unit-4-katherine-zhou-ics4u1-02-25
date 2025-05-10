@@ -33,7 +33,6 @@ public class Player{
             this.hand = new Card[0];
         }
     }
-
     /**
      * Takes a name and age while creating a default empty hand of cards
      * @param name is the name of the player
@@ -44,7 +43,6 @@ public class Player{
         this.age = age;
         this.hand = new Card[0];
     }
-
     /**
      * returns the name of the player
      * @return returns the name of the player
@@ -52,7 +50,6 @@ public class Player{
     public String getName(){
         return this.name;
     }
-
     /**
      * returns the age of the player
      * @return returns the age of the player
@@ -60,7 +57,6 @@ public class Player{
     public int getAge(){
         return this.age;
     }
-
     /**
      * returns the cards in the player's hand
      * @return returns the player's hand
@@ -68,7 +64,6 @@ public class Player{
     public Card[] getHand(){
         return this.hand;
     }
-
     /**
      * returns the number of cards in the player's hand
      * @return returns the size of the player's hand
@@ -76,7 +71,6 @@ public class Player{
     public int size(){
         return this.hand.length;
     }
-    
     /**
      * Adds a card from the deck to the hand of the player
      * @param deck the deck that the card is taken from
@@ -93,7 +87,6 @@ public class Player{
         newHand[this.hand.length] = card;
         this.hand = newHand;
     }
-
     /**
      * Discards a card from the hand to the given deck's discard pile
      * Returns true if the card exists in hand, false otherwise
@@ -147,7 +140,6 @@ public class Player{
         }
         return false;
     }
-
     /**
      * Will print out their name, age, and hand of cards
      * @return returns the player's name, age, and hand of cards (eg. "Mr. Kalisz, 99, Ace of hearts, King of Hearts, Queen of Hearts, Jack of Hearts, 9 of Spades")
@@ -163,7 +155,6 @@ public class Player{
         return person;
     }
 }
-
 
 
 
