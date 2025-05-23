@@ -1,0 +1,7 @@
+K(30%): 100
+I(30%): 93
+C(10%): 100
+A(30%): 95
+96.4%
+Don't need an if statement for equals.  Also need to check if obj is a card and not null.
+Implementation would be much easier using a Arraylist for the backend
